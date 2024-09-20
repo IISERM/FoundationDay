@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* #FFFFFF */
+    --foreground: 0 0% 0%; /* #000000 */
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%; /* Same as foreground */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --primary: 240 42% 45%; /* #3a3871 */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --secondary: 240 42% 45%; /* Same as primary for banner */
+    --secondary-foreground: 0 0% 100%; /* White for text on banner */
+
+    --accent: 240 42% 45%; /* Same as primary */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 0 0% 0%; /* For links/titles/bold words */
+    
+    --link-color: 14.9 58.6% 44.1%; /* #aa4a33 for links/titles/bold words */
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%; /* You can customize dark mode */
+    --foreground: 0 0% 100%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary: 240 42% 45%; /* Same as light mode */
+    --primary-foreground: 0 0% 100%; /* White text on dark primary */
+
+    --secondary: 240 42% 45%; /* Same as primary */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 240 42% 45%; /* Same as primary */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: 0 0% 100%; /* For links/titles/bold words in dark mode */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  a, strong, h1, h2, h3, h4 {
+    color: hsl(var(--link-color));
+  }
+  .banner {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@layer utilities {
+  .text-blue {
+    @apply text-[#13162A];
+  }
+
+  .bg-blue {
+    @apply bg-[#13162A];
+  }
+}
+
