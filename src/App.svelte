@@ -27,8 +27,8 @@
 <main class="min-h-screen flex flex-col justify-start items-center bg-gray-100">
   <img 
     alt="Foundation Day Banner" 
-    src="/banner.webp" 
-    class="h-10 w-full object-cover"
+    src="web/foundationday/FoundationDayBanner.webp" 
+    class="w-full"
   />
   <div id="Header" class="bg-blue w-full px-20 justify-between items-center border-b shadow-sm flex space-x-6 text-white">
     <button on:click={() => setActivePage(Pages.HOME)} class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.HOME ? 'border-white text-white font-bold' : 'border-transparent'}">
