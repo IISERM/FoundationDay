@@ -29,6 +29,7 @@
     "svelte-preprocess"
   ],
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/gapi": "^0.0.47",
     "@types/gapi.auth2": "^0.0.60",
     "@types/gapi.client": "^1.0.8",

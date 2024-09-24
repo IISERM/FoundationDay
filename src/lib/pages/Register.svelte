@@ -68,7 +68,7 @@
 
 <main class="max-w-4xl mx-auto px-4 py-8 bg-white">
   <div class="bg-blue text-white text-center py-8 rounded-md mb-8">
-    <h1 class="text-4xl font-extrabold text-white px-10">Registration for Foundation Day 2023</h1>
+    <h1 class="text-4xl font-extrabold text-white px-10">Registration for Foundation Day 2024</h1>
     <p class="text-lg mt-2">Engage, Learn, and Compete</p>
   </div>
 

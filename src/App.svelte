@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Home as HomeIcon, Info, Trophy, Monitor, BookOpen, UserPlus } from 'lucide-svelte';
+  import { Home as HomeIcon, Info, Trophy, Monitor, BookOpen, UserPlus, Calendar } from 'lucide-svelte';
 
   import Home from "$lib/pages/Home.svelte";
   import About from "$lib/pages/About.svelte";
@@ -7,6 +7,7 @@
   import Demonstrations from "$lib/pages/Demonstrations.svelte";
   import Lecture from "$lib/pages/Lecture.svelte";
   import Register from "$lib/pages/Register.svelte";
+  import Schedule from "$lib/pages/Schedule.svelte";
 
   enum Pages {
     HOME = 'Home',
@@ -14,7 +15,8 @@
     COMPETITIONS = 'Competitions',
     DEMONSTRATIONS = 'Demonstrations',
     LECTURE = 'Foundation Day Lecture',
-    REGISTER = 'Register'
+    REGISTER = 'Register',
+    SCHEDULE = 'Schedule',
   }
 
   let activePage: Pages = Pages.HOME;
@@ -27,31 +29,56 @@
 <main class="min-h-screen flex flex-col justify-start items-center bg-gray-100">
   <img 
     alt="Foundation Day Banner" 
-    src="web/foundationday/FoundationDayBanner.webp" 
+    src="/web/foundationday/FoundationDayBanner.webp" 
     class="w-full"
   />
-  <div id="Header" class="bg-blue w-full px-20 justify-between items-center border-b shadow-sm flex space-x-6 text-white">
-    <button on:click={() => setActivePage(Pages.HOME)} class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.HOME ? 'border-white text-white font-bold' : 'border-transparent'}">
+  <div id="Header" class="bg-blue w-full px-5 justify-between items-center border-b shadow-sm flex space-x-6 text-white">
+    <button 
+      on:click={() => setActivePage(Pages.HOME)} 
+      class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.HOME ? 'border-white text-white font-bold' : 'border-transparent'}"
+    >
       <HomeIcon class="w-4 h-4" />
       <span class={activePage === Pages.HOME ? 'first-letter:text-xl' : ''}>Home</span>
     </button>
-    <button on:click={() => setActivePage(Pages.ABOUT)} class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.ABOUT ? 'border-white text-white font-bold' : 'border-transparent'}">
+    <button 
+      on:click={() => setActivePage(Pages.ABOUT)} 
+      class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.ABOUT ? 'border-white text-white font-bold' : 'border-transparent'}"
+    >
       <Info class="w-4 h-4" />
       <span class={activePage === Pages.ABOUT ? 'first-letter:text-xl' : ''}>About</span>
     </button>
-    <button on:click={() => setActivePage(Pages.COMPETITIONS)} class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.COMPETITIONS ? 'border-white text-white font-bold' : 'border-transparent'}">
+    <button 
+      on:click={() => setActivePage(Pages.COMPETITIONS)} 
+      class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.COMPETITIONS ? 'border-white text-white font-bold' : 'border-transparent'}"
+    >
       <Trophy class="w-4 h-4" />
       <span class={activePage === Pages.COMPETITIONS ? 'first-letter:text-xl' : ''}>Competitions</span>
     </button>
-    <button on:click={() => setActivePage(Pages.DEMONSTRATIONS)} class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.DEMONSTRATIONS ? 'border-white text-white font-bold' : 'border-transparent'}">
+    <button 
+      on:click={() => setActivePage(Pages.DEMONSTRATIONS)} 
+      class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.DEMONSTRATIONS ? 'border-white text-white font-bold' : 'border-transparent'}"
+    >
       <Monitor class="w-4 h-4" />
       <span class={activePage === Pages.DEMONSTRATIONS ? 'first-letter:text-xl' : ''}>Demonstrations</span>
     </button>
-    <button on:click={() => setActivePage(Pages.LECTURE)} class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.LECTURE ? 'border-white text-white font-bold' : 'border-transparent'}">
+    <button 
+      on:click={() => setActivePage(Pages.SCHEDULE)} 
+      class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.SCHEDULE ? 'border-white text-white font-bold' : 'border-transparent'}"
+    >
+      <Calendar class="w-4 h-4" />
+      <span class={activePage === Pages.SCHEDULE ? 'first-letter:text-xl' : ''}>Schedule</span>
+    </button>
+    <button 
+      on:click={() => setActivePage(Pages.LECTURE)} 
+      class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.LECTURE ? 'border-white text-white font-bold' : 'border-transparent'}"
+    >
       <BookOpen class="w-4 h-4" />
       <span class={activePage === Pages.LECTURE ? 'first-letter:text-xl' : ''}>Foundation Day Lecture</span>
     </button>
-    <button on:click={() => setActivePage(Pages.REGISTER)} class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.REGISTER ? 'border-white text-white font-bold' : 'border-transparent'}">
+    <button 
+      on:click={() => setActivePage(Pages.REGISTER)} 
+      class="relative -translate-y-1 flex items-center space-x-1 transition-colors duration-200 hover:text-white border-b-2 {activePage === Pages.REGISTER ? 'border-white text-white font-bold' : 'border-transparent'}"
+    >
       <UserPlus class="h-4 w-4" />
       <span class={activePage === Pages.REGISTER ? 'first-letter:text-xl' : ''}>Register</span>
     </button>
@@ -81,6 +108,10 @@
     <Register />
   {/if}
 
+  {#if activePage === Pages.SCHEDULE}
+    <Schedule />
+  {/if}
+
   <!-- Footer -->
   <div id="footer" class="bg-blue text-white w-full">
     <div class="py-10">
@@ -99,7 +130,7 @@
               <strong>Email:</strong> foundationday@iisermohali.ac.in<br>
             </p>
           </div>
-  
+
           <div>
             <h4 class="text-4xl font-bold">Reach Us</h4>
             <div class="mt-4">
@@ -114,7 +145,7 @@
               </iframe>
             </div>
           </div>
-  
+
         </div>
       </div>
     </div>
@@ -137,5 +168,4 @@
   #footer iframe {
     border: 2px solid #fff;
   }
-
 </style>

@@ -1,4 +1,4 @@
-import { collection, getDocs, QuerySnapshot} from 'firebase/firestore';
+import { collection, getDocs, QuerySnapshot } from 'firebase/firestore';
 import type { DocumentData } from 'firebase/firestore';
 import { db } from '$lib/firebaseConfig';
 
@@ -38,9 +38,11 @@ export async function fetchPeople(): Promise<ClubPeople[]> {
     const clubPeople: ClubPeople[] = Object.entries(groupedPeople).map(
         ([clubName, people]) => ({
             name: clubName,
-            people: people,
+            people: people.sort((a, b) => a.position.localeCompare(b.position)).reverse(),
         })
     );
+
+    clubPeople.sort((a, b) => a.name.localeCompare(b.name));
 
     return clubPeople;
 }
