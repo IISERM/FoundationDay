@@ -121,9 +121,9 @@
           <div>
             <h3 class="text-4xl font-bold">IISER Mohali</h3>
             <p class="mt-4">
-              Dean Outreach and International Relations <br>
+              Dean, International Relations and Outreach <br>
               Indian Institute of Science Education and Research (IISER), Mohali <br>
-              Knowledge city, Sector 81, Manauli, PO<br>
+              Knowledge City, Sector 81, Manauli, PO<br>
               Sahibzada Ajit Singh Nagar, Punjab 140306<br>
               India<br><br>
               <strong>Phone:</strong> +91 76763 30891<br>

@@ -4,8 +4,7 @@
     import { fetchPeople, type ClubPeople, type People } from "$lib/functions/fetchPeople";
     import { onMount } from "svelte";
     import { getGoogleDriveImageID, isGoogleDriveLink } from "$lib/functions/imageUtils";
-  
-    let youtubeVideoUrl = "https://www.youtube.com/embed/example";
+
     let coreTeam: People[] = [];
     let clubCoordinators: ClubPeople[] = [];
     let loading = true;
@@ -79,13 +78,7 @@
         <p class="mt-4 text-xl text-gray-700">
             Watch the trailer for IISER Mohali Foundation Day 2024, celebrating 18 years of excellence in science and education.
         </p>
-        <iframe
-            class="mt-8 w-full md:w-3/4 aspect-[4/3]"
-            src={youtubeVideoUrl}
-            title="Foundation Day 2024 Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-        ></iframe>
+        <iframe src="https://www.youtube.com/embed/GRZuKIkrD0o" title="Teaser for 18th Foundation Day 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="aspect-[4/3] w-full"></iframe>
     </section>
   
     <section id="core-committee" class="my-12">
